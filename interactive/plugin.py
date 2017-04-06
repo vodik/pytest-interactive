@@ -95,7 +95,7 @@ def gen_nodes(item, cache):
     chain = item.listchain()
     for node in chain:
         try:
-            name = node._obj.__name__
+            name = node.obj.__name__
         except AttributeError as ae:
             # when either Instance or non-packaged module
             if isinstance(node, pytest.Instance):
